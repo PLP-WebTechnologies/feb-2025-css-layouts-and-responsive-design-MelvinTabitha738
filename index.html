@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Layout with Flexbox</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+   
+}
+
+.content-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    font-size: 16px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View (600px - 900px) */
+@media (max-width: 900px) {
+    .content-box {
+        width: 45%;
+    }
+}
+
+/* Mobile View (up to 600px) */
+@media (max-width: 600px) {
+    .content-box {
+        width: 100%;
+    }
+
+    .navbar ul {
+        padding: 0;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+@media (orientation:potrait) {
+    body{background-color:purple ;
+    }
+    
+}
+@media (orientation:landscape) {
+    body{background-color:gray ;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <article class="content-box">
+            <h2>Article 1</h2>
+            <p>This is the first article content.</p>
+        </article>
+        <article class="content-box">
+            <h2>Article 2</h2>
+            <p>This is the second article content.</p>
+        </article>
+        <article class="content-box">
+            <h2>Article 3</h2>
+            <p>This is the third article content.</p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Webpage. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
